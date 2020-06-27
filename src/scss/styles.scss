@@ -34,9 +34,9 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0px 140px;
+  padding: 0px 147px !important;
   background-color: #fff;
-  height: 70px;
+  height: 155px;
   display: flex;
   align-items: center;
   nav {
@@ -46,6 +46,9 @@ header {
     align-items: center;
     ul {
       display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       list-style: none;
       text-transform: uppercase;
       font-size: 10px;
@@ -54,6 +57,34 @@ header {
       &:first-child {
         li {
           margin-right: 60px;
+        }
+      }
+      .header__cart {
+        display: flex;
+        position: relative;
+        width: 50px;
+        top: -11px;
+        .cart__icon {
+          background-image: url("../../bag.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          height: 20px;
+          left: 0;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 20px;
+        }
+        .cart__count {
+          color: #939598;
+          font-family: "proxima-nova", "Helvetica", "Arial", sans-serif;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: 5px;
+          right: 0;
         }
       }
     }
@@ -141,6 +172,55 @@ header {
   img,
   div {
     width: 50%;
+  }
+}
+
+.promo {
+  width: 100%;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .promo__title {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      @extend %miniTitle;
+      text-align: center;
+      margin: 0 0 17px 0;
+    }
+    h3 {
+      font-size: 36px;
+      text-align: center;
+      margin: 0 0 32px 0;
+      font-weight: 100;
+      width: 40%;
+    }
+  }
+  .promo__regi {
+    position: relative;
+    width: 40%;
+    input[type="email"] {
+      background-color: transparent;
+      border-bottom: 1px solid #414141;
+      color: #414141;
+      font-family: "freight-display-pro", "Times New Roman", serif;
+      font-size: 40px;
+      line-height: 45px;
+      padding: 20px 60px 20px 0;
+      position: relative;
+      width: calc(100% - -14px);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      outline: none;
+    }
   }
 }
 
@@ -438,6 +518,20 @@ header {
         opacity: 0.5;
       }
     }
+  }
+}
+
+.follow {
+  font-family: "freight-display-pro", "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 45px;
+  margin: 100px 0 60px 0;
+  text-align: center;
+  a {
+    font-size: 27px;
+    color: #9d9d9c;
+    text-transform: none;
+    font-weight: 100;
   }
 }
 
